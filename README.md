@@ -8,4 +8,4 @@
 - Gradle dependencies - libraries from build.gradle file
 - build - once prepare the build(jar or war) for deployment to production env
 - build.gradle - its build tool (gradle -build.gradle or maven- pom.xml) (deprecated libraries)
-**- referrences -** https://spring.io/guides/gs/spring-boot/
+- **- referrences -** https://spring.io/guides/gs/spring-boot/
