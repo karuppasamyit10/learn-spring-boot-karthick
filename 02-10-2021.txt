@@ -1,0 +1,22 @@
+2021-10-03 00:32:32.832  INFO 14260 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication on DESKTOP-TEBO0UF with PID 14260 (D:\karuppu\repos\poc\learn-spring-boot-karthick\bin started by karuppu in D:\karuppu\repos\poc\learn-spring-boot-karthick)
+2021-10-03 00:32:32.835  INFO 14260 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2021-10-03 00:32:32.887  INFO 14260 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1460a8c0: startup date [Sun Oct 03 00:32:32 IST 2021]; root of context hierarchy
+2021-10-03 00:32:34.217  INFO 14260 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2021-10-03 00:32:34.238  INFO 14260 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-03 00:32:34.238  INFO 14260 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2021-10-03 00:32:34.318  INFO 14260 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-03 00:32:34.318  INFO 14260 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1435 ms
+2021-10-03 00:32:34.518  INFO 14260 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2021-10-03 00:32:34.522  INFO 14260 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-10-03 00:32:34.523  INFO 14260 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-10-03 00:32:34.523  INFO 14260 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-10-03 00:32:34.524  INFO 14260 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-10-03 00:32:34.893  INFO 14260 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1460a8c0: startup date [Sun Oct 03 00:32:32 IST 2021]; root of context hierarchy
+2021-10-03 00:32:34.943  INFO 14260 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-10-03 00:32:34.945  INFO 14260 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-10-03 00:32:34.968  INFO 14260 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-10-03 00:32:34.968  INFO 14260 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-10-03 00:32:34.998  INFO 14260 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-10-03 00:32:35.123  INFO 14260 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2021-10-03 00:32:35.172  INFO 14260 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2021-10-03 00:32:35.178  INFO 14260 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 2.643 seconds (JVM running for 3.855)
