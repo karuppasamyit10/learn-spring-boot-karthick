@@ -31,6 +31,7 @@ public class EmployeeController {
 		return employee;
 	}
 	
+	
 	@RequestMapping(value="/employee/get/{no}",method= RequestMethod.GET)
 	public List<Employee> getEmployee(@PathVariable(required=false) int no)
 	{
