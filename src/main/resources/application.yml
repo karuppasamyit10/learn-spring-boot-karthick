@@ -1,3 +1,13 @@
 server:
   port: 8081
   context-path: /learn-sb-karthik
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#      dml
+  datasource:
+    url: jdbc:mysql://localhost:3306/employee
+    username: root
+    password: 
