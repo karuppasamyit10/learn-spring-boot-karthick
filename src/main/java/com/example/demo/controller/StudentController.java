@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.student.entity.Student;
-import com.example.demo.student.service.repository.StudentImplement;
+import com.example.demo.student.service.StudentImplement;
 
 import java.util.List;
 

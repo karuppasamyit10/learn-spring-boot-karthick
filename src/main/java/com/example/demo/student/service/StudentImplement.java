@@ -1,4 +1,4 @@
-package com.example.demo.student.service.repository;
+package com.example.demo.student.service;
 
 import javax.transaction.Transactional;
 
