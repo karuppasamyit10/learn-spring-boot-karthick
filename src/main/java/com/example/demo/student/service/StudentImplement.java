@@ -65,15 +65,15 @@ public class StudentImplement implements StudentService {
 	@Override
 	public List<Student> getAllStudent() {
 		// TODO Auto-generated method stub
-		List<Student> studentGetAll= studentrepository.findAll();
+		List<Student> studentGetAll= studentrepository.findAllStudent();
 		return studentGetAll;
 	}
 
 	@Override
-	public List<Student> getAllByName(String name) {
+	public List<Student> getAllByName(String name){
 		// TODO Auto-generated method stub
-		List<Student> stu= studentrepository.findByStuNameContains(name);
-		return stu;
+		List<Student> stuGetByName= studentrepository.findByStuName(name);
+		return stuGetByName;
 	}
 
 	

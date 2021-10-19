@@ -41,11 +41,14 @@ public class StudentController {
 	}
 	
 	@RequestMapping(value="/student/getAllByName",method=RequestMethod.GET)
-	public List<Student> getAllByStuName(String name) 
+	public List<Student> getAllByName( String name) 
+	
 	{
 		return studentimplement.getAllByName(name);
+		
 	}
 		
+	
 	@RequestMapping(value="/student/update",method=RequestMethod.PUT)
 	public Student updateStudent(Student student){
 		if(student.getId()== 0){
