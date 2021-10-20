@@ -1,9 +1,13 @@
 package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.student.entity.Student;
@@ -40,14 +44,15 @@ public class StudentController {
 		return studentimplement.getAllStudent();
 	}
 	
+	
 	@RequestMapping(value="/student/getAllByName",method=RequestMethod.GET)
-	public List<Student> getAllByName( String name) 
+	public List<Student> findByStuName(@RequestParam  String stuName) 
 	
 	{
-		return studentimplement.getAllByName(name);
+		return  studentimplement.getByStuName(stuName);
 		
 	}
-		
+
 	
 	@RequestMapping(value="/student/update",method=RequestMethod.PUT)
 	public Student updateStudent(Student student){
@@ -57,12 +62,38 @@ public class StudentController {
 		Student studentUpdate=studentimplement.update(student);
 		return studentUpdate;
 	}
+	
+	
 	@RequestMapping(value="/student/delete/{id}",method=RequestMethod.DELETE)
 	public void delete(@PathVariable(required=false) int id){
 		
-		
-		studentimplement.delete(id);
-		
-		
+		studentimplement.delete(id);	
 	}
+	
+	
+	@GetMapping("/student/nameAnddep")
+	public ResponseEntity<List<Student>> getStudentByStuNameAndStuDepName(@RequestParam String stuName,@RequestParam String stuDepName)
+	{
+		 
+		return new ResponseEntity<>(studentimplement.findByStuNameAndStuDepName(stuName, stuDepName),HttpStatus.OK);
+	}
+ 
+	@GetMapping("/student/nameOrdep")
+	public ResponseEntity<List<Student>> getStudentByStuNameOrStuDepName(@RequestParam String stuName,@RequestParam String stuDepName)
+	{
+			 
+			return new ResponseEntity<>(studentimplement.findByStuNameOrStuDepName(stuName, stuDepName),HttpStatus.OK);
+	}
+	
+	@GetMapping("/student/getAllByDep")
+	public ResponseEntity<List<Student>> getByStuDep(@RequestParam String stuDepName)
+	{
+			 
+			return new ResponseEntity<>(studentimplement.getByStuDepName(stuDepName),HttpStatus.OK);
+		}
+
+
+
+
+
 }

@@ -3,6 +3,8 @@ package com.example.demo.student.service;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+
 import org.springframework.stereotype.Service;
 
 import com.example.demo.student.entity.Student;
@@ -18,7 +20,8 @@ public class StudentImplement implements StudentService {
 	StudentRepository studentrepository;
 	
 	@Override
-	public Student save(Student student) {
+	public Student save(Student student) 
+	{
 		Student studentObj=new Student();
 		studentObj.setStuName( student.getStuName());
 		studentObj.setStuRollNo(student.getStuRollNo());
@@ -46,14 +49,16 @@ public class StudentImplement implements StudentService {
 	}
 
 	@Override
-	public Student get(int id) {
+	public Student get(int id) 
+	{
 		// TODO Auto-generated method stub
 		Student studentGet=studentrepository.findOne(id);
 		return studentGet;
 	}
 
 	@Override
-	public void delete(int id) {
+	public void delete(int id)
+	{
 		// TODO Auto-generated method stub
 		Student stuDelete=studentrepository.findOne(id);
 		if(stuDelete != null)
@@ -63,20 +68,46 @@ public class StudentImplement implements StudentService {
 	}
 
 	@Override
-	public List<Student> getAllStudent() {
+	public List<Student> getAllStudent() 
+	{
 		// TODO Auto-generated method stub
 		List<Student> studentGetAll= studentrepository.findAllStudent();
 		return studentGetAll;
 	}
 
 	@Override
-	public List<Student> getAllByName(String name){
+	public List<Student> getByStuName(String stuName)
+	{
 		// TODO Auto-generated method stub
-		List<Student> stuGetByName= studentrepository.findByStuName(name);
+		List<Student> stuGetByName= studentrepository.findByStuName(stuName);
 		return stuGetByName;
 	}
 
+	public List<Student> findByStuNameAndStuDepName(String StuName,String StuDepName)
+	{
+		
+		List<Student> stuGetByNameAndDep=studentrepository.findByStuNameAndStuDepName(StuName, StuDepName);
+		return stuGetByNameAndDep;
+		
+	}
 	
 	
+	public List<Student> findByStuNameOrStuDepName(String StuName,String StuDepName)
+	{
+		
+		List<Student> stuGetByNameOrDep=studentrepository.findByStuNameOrStuDepName(StuName, StuDepName);
+		return stuGetByNameOrDep;
+
+	}
+
+	@Override
+	public List<Student> getByStuDepName(String stuDepName) 
+	{
+		// TODO Auto-generated method stub
+		List<Student> stuGetByDepName=studentrepository.findByStuDepName(stuDepName);
+		return stuGetByDepName;
+	}
+	
+
 
 }
