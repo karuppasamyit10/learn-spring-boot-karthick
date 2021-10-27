@@ -1,13 +1,10 @@
 package com.example.demo.student.entity;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
@@ -38,9 +35,8 @@ public class StudentMark {
 	@Column(name="exam_term")
 	private String term;
 	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="student_id")
-	private Student student;
+	@Column(name="student_id")
+	private int studentId;
 	
 
 	public int getTotal() {
@@ -91,11 +87,12 @@ public class StudentMark {
 		this.studentMarkId = studentMarkId;
 	}
 
-	public Student getStudent() {
-		return student;
+	public int getStudentId() {
+		return studentId;
 	}
 
-	public void setStudent(Student student) {
-		this.student = student;
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
 	}
+
 }

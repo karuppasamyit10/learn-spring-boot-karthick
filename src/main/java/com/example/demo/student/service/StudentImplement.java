@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.student.entity.Student;
 import com.example.demo.student.repository.StudentRepository;
 
+import java.util.Date;
 import java.util.List;
 
 @Transactional
@@ -26,6 +27,7 @@ public class StudentImplement implements StudentService {
 		studentObj.setStuName( student.getStuName());
 		studentObj.setStuRollNo(student.getStuRollNo());
 		studentObj.setStuDepName(student.getStuDepName());
+		studentObj.setCreatedDate(new Date());
 		Student stu=studentrepository.save(studentObj);
 		return stu;
 		

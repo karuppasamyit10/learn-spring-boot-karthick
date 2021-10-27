@@ -34,7 +34,7 @@ public class StudentMarkController {
 				studentMark1.setMaths(studentmark.getMaths());
 				studentMark1.setTotal(studentmark.getTamil()+studentmark.getEnglish()+studentmark.getMaths());
 				studentMark1.setTerm(studentmark.getTerm());
-				studentMark1.setStudent(studentObj);
+				studentMark1.setStudentId(studentObj.getId());
 				StudentMark studentMark2 = studentmarkrepository.save(studentMark1);
 				return studentMark2;
 			}
@@ -60,7 +60,7 @@ public class StudentMarkController {
 				studentMark1.setMaths(studentMarkBean.getMaths());
 				studentMark1.setTotal(studentMarkBean.getTamil()+studentMarkBean.getEnglish()+studentMarkBean.getMaths());
 				studentMark1.setTerm(studentMarkBean.getTerm());
-				studentMark1.setStudent(studentObj);
+				studentMark1.setStudentId(studentObj.getId());
 				StudentMark studentMark2 = studentmarkrepository.save(studentMark1);
 				return studentMark2;
 			}

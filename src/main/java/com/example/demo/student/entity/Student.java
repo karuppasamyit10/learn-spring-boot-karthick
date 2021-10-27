@@ -28,9 +28,9 @@ public class Student {
 	@Column
 	private String stuDepName;
 	
-	@JsonFormat(pattern="yyyy-MM-dd ",shape=Shape.STRING)
+	@JsonFormat(pattern="yyyy-MM-dd",shape=Shape.STRING)
 	@Column
-	private Date createdDate=new Date();
+	private Date createdDate;
 	
 	
 	public int getId() {
