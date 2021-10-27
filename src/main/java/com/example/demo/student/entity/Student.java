@@ -1,13 +1,22 @@
 package com.example.demo.student.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 
 @Entity
+@Table(name="students")
 public class Student {
+
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
@@ -18,6 +27,12 @@ public class Student {
 	private int stuRollNo;
 	@Column
 	private String stuDepName;
+	
+	@JsonFormat(pattern="yyyy-MM-dd ",shape=Shape.STRING)
+	@Column
+	private Date createdDate=new Date();
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -43,4 +58,10 @@ public class Student {
 		this.stuDepName = stuDepName;
 	}
 
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
 }

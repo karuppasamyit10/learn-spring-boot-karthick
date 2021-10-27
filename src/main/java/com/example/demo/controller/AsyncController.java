@@ -13,18 +13,21 @@ import com.example.demo.dao.AsyncTest;
 	private AsyncTest asynctest;
 	
 	@GetMapping("/send")
-	public String sendMessage(String msg)	
+	public String sendMessage(String msg,String name)	
+	
 	{
+		
+		asynctest.display(name);
 		asynctest.sentTextMsg(msg);
 		return "Msg sent succeccFully "+Thread.currentThread().getName();
 	}
 	
-	@GetMapping("/display")
-	public String getDisplay(String name){
-		asynctest.display(name);
-		return "name display successfully "+Thread.currentThread().getName();
-		
-	}
+//	@GetMapping("/display")
+//	public String getDisplay(String name){
+//		asynctest.display(name);
+//		return "name display successfully "+Thread.currentThread().getName();
+//		
+//	}
 	
 
 }

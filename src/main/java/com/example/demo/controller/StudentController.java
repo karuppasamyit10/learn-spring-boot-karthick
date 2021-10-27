@@ -75,14 +75,14 @@ public class StudentController {
 	public ResponseEntity<List<Student>> getStudentByStuNameAndStuDepName(@RequestParam String stuName,@RequestParam String stuDepName)
 	{
 		 
-		return new ResponseEntity<>(studentimplement.findByStuNameAndStuDepName(stuName, stuDepName),HttpStatus.OK);
+		return new ResponseEntity<>(studentimplement.getByStuNameAndStuDepName(stuName, stuDepName),HttpStatus.OK);
 	}
  
 	@GetMapping("/student/nameOrdep")
 	public ResponseEntity<List<Student>> getStudentByStuNameOrStuDepName(@RequestParam String stuName,@RequestParam String stuDepName)
 	{
 			 
-			return new ResponseEntity<>(studentimplement.findByStuNameOrStuDepName(stuName, stuDepName),HttpStatus.OK);
+			return new ResponseEntity<>(studentimplement.getByStuNameOrStuDepName(stuName, stuDepName),HttpStatus.OK);
 	}
 	
 	@GetMapping("/student/getAllByDep")

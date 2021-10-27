@@ -83,7 +83,7 @@ public class StudentImplement implements StudentService {
 		return stuGetByName;
 	}
 
-	public List<Student> findByStuNameAndStuDepName(String StuName,String StuDepName)
+	public List<Student> getByStuNameAndStuDepName(String StuName,String StuDepName)
 	{
 		
 		List<Student> stuGetByNameAndDep=studentrepository.findByStuNameAndStuDepName(StuName, StuDepName);
@@ -92,7 +92,7 @@ public class StudentImplement implements StudentService {
 	}
 	
 	
-	public List<Student> findByStuNameOrStuDepName(String StuName,String StuDepName)
+	public List<Student> getByStuNameOrStuDepName(String StuName,String StuDepName)
 	{
 		
 		List<Student> stuGetByNameOrDep=studentrepository.findByStuNameOrStuDepName(StuName, StuDepName);
