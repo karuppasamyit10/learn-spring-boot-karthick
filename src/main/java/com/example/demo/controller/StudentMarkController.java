@@ -26,7 +26,7 @@ public class StudentMarkController {
 		if(student != null)
 		{
 			Student studentObj=studentrepository.getOne(student.getId());
-			if(student != null)
+			if(studentObj != null)
 			{
 				StudentMark studentMark1 = new StudentMark();
 				studentMark1.setTamil(studentmark.getTamil());
@@ -40,10 +40,7 @@ public class StudentMarkController {
 			}
 		}
 	
-			return null;
-		
-		
-					
+	return null;		
 	}
 	
 	@RequestMapping(value="/student/mark/add2",method=RequestMethod.POST)

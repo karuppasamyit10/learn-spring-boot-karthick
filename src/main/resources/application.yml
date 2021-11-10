@@ -12,13 +12,13 @@
 #    username: root
 #    password: 
 server:
-  port: 8086
+  port: 8081
   context-path: /learn-sb-karthik
 spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
 
   datasource:
     url: jdbc:mysql://localhost:3306/sample
